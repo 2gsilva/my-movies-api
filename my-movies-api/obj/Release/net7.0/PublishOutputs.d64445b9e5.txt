@@ -1,0 +1,12 @@
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.exe
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.deps.json
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.runtimeconfig.json
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.pdb
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
