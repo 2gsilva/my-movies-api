@@ -6,6 +6,9 @@ C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movi
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.runtimeconfig.json
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\my-movies-api.pdb
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll

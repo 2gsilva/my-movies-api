@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\RepoPessoal\my-movies-api\dist</_PublishTargetUrl>
-    <History>True|2023-04-21T20:31:07.3802897Z;</History>
+    <History>True|2023-08-04T01:34:34.2923506Z;True|2023-04-21T17:31:07.3802897-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
