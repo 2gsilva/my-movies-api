@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using my_movies_api.Repositories;
+using my_movies_api.Models.Commands.Requests;
+using my_movies_api.Models.Handlers.Interfaces.Handlers;
 
 namespace my_movies_api.Controllers
 {
@@ -8,23 +9,23 @@ namespace my_movies_api.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly MovieRepository _repository; 
+        private readonly ICreateMovieHandler _handler; 
 
-        public MoviesController(MovieRepository repository) 
+        public MoviesController(ICreateMovieHandler handler) 
         {
-            _repository = repository;
+            _handler = handler;
         }
 
-        [HttpGet]
+        [HttpPost]
         [EnableCors("MyPolicy")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult GetAll()
+        public IActionResult Create([FromBody] CreateMovieRequest command)
         {
-            var movies = _repository.GetAll();
+            var response = _handler.Handle(command);
 
-          return Ok(movies);  
+          return Created("", response);  
         }
     }
 }
