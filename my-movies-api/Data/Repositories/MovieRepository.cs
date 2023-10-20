@@ -1,4 +1,4 @@
-﻿using my_movies_api.Models._3.Handlers._3._1.Interfaces._3._1._2.Repositories;
+﻿using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
 using my_movies_api.Models.Domains;
 
 namespace my_movies_api.Data.Repositories
@@ -16,6 +16,11 @@ namespace my_movies_api.Data.Repositories
         {
             _context.Add(movie);
             _context.SaveChanges();
+        }
+
+        public ICollection<Movie> Get()
+        {
+            return _context.Movies.ToList();
         }
     }
 }

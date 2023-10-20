@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using my_movies_api.Data;
 using my_movies_api.Data.Repositories;
-using my_movies_api.Models._3.Handlers._3._1.Interfaces._3._1._2.Repositories;
+using my_movies_api.Models._3.Handlers;
+using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
+using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
 using my_movies_api.Models.Handlers;
 using my_movies_api.Models.Handlers.Interfaces.Handlers;
 
@@ -40,6 +42,7 @@ builder.Services.AddMvc();
 
 builder.Services
     .AddScoped<ICreateMovieHandler, CreateMovieHandler>()
+    .AddScoped<IGetMoviesHandler, GetMoviesHandler>()
     .AddScoped<IMovieRepository, MovieRepository>()
     .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"));
 
