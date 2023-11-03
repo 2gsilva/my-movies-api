@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DeFeSn8A1uSS0R0c2c4fIboiSsjNVvizWFPcY/NbtzGEkbF1Jyyckq3/QAnCosYBGoKdTlA3bTCiqN4xl6KHVg==",
+  "dgSpecHash": "OIFW9oGP8di3bc5ZoRAzTWzB6ylBLtLcnYsBpCHHLKc9ANksJrRUbX8XQNxZEJjo2dKtPfFdwAlAorFgRjKlCQ==",
   "success": true,
   "projectFilePath": "C:\\RepoPessoal\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,11 @@
     "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
-    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.8\\microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.8\\microsoft.windowsdesktop.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.8\\microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.8\\microsoft.netcore.app.host.win-x64.7.0.8.nupkg.sha512"
   ],
   "logs": []
 }
