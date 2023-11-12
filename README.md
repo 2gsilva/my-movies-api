@@ -28,4 +28,4 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 * ASP.NET Web API
 * .Net7 C#
 * Entity Framework Core In-Memory
-* CQRS
+* CQRS pattern
