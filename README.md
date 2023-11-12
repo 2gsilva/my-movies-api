@@ -23,8 +23,9 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
    - docker pull 2gsilva/my-movies-api:tag-desejada
    
 ```
-## 🛠️ Construído com
+## 🛠️ Construído com (tecnologias e técnicas)
 
 * ASP.NET Web API
 * .Net7 C#
 * Entity Framework Core In-Memory
+* CQRS
