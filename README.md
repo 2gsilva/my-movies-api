@@ -18,7 +18,7 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 
 ```
 - Baixar a imagem do Docker Hub: 
-   - docker pull 2gsilva/my-movies-api:<tag desejada>
+   - docker pull 2gsilva/my-movies-api:tag-desejada
    
 ```
 ## 🛠️ Construído com
