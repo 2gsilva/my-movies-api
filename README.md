@@ -1,6 +1,8 @@
 #  My Movies API
 Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de Arquitetura de Software Distribuído da PUC Minas. 
 
+> :construction: Projeto em construção :construction:
+
 ## 📍 Como executar o projeto
 
 ### 🏠 local
