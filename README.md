@@ -12,16 +12,15 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
         https://dotnet.microsoft.com/pt-br/download/dotnet/7.0
 
 ```
-
 ### 🐳 docker
 
 - pré-requisitos:
     - Docker Engine
     - Docker Compose
 
-```
 - Baixar a imagem do Docker Hub: 
    - docker pull 2gsilva/my-movies-api:tag-desejada
+
 - Docker-Compose
    - baixar o repo no github
    - abra um terminal e navegue até a pasta do projeto
