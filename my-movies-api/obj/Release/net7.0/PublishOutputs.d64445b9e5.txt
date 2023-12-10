@@ -9,7 +9,16 @@ C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microso
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Caching.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Options.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Pipelines.Sockets.Unofficial.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\StackExchange.Redis.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

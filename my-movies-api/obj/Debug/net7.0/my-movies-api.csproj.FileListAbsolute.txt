@@ -34,4 +34,12 @@ C:\RepoPessoal\my-movies-api\my-movies-api\obj\Debug\net7.0\ref\my-movies-api.dl
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\RepoPessoal\my-movies-api\my-movies-api\obj\Debug\net7.0\my-movies-api.sourcelink.json
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\bin\Debug\net7.0\StackExchange.Redis.dll

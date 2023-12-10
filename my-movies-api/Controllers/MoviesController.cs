@@ -25,12 +25,12 @@ namespace my_movies_api.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult Create([FromBody] CreateMovieRequest command)
+        public async Task<IActionResult> Create([FromBody] CreateMovieRequest command)
         {
             if(!ModelState.IsValid)
                 return BadRequest();
 
-            var response = _create.Handle(command);
+            var response = await _create.Handle(command);
 
           return Created("", response);  
         }
@@ -41,11 +41,27 @@ namespace my_movies_api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var response = _get.Handle();
+            var response = await _get.Handle();
 
             if(!response.Any())
+                return NoContent();
+
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("v1/movies/{id}")]
+        [EnableCors("MyPolicy")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Get(string id)
+        {
+            var response = await _get.Handle(id);
+
+            if (response is null)
                 return NoContent();
 
             return Ok(response);

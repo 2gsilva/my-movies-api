@@ -10,12 +10,14 @@ namespace my_movies_api.Models.Handlers
     {
         private readonly IMovieRepository _repository;
 
-        public CreateMovieHandler(IMovieRepository repository)
+        public CreateMovieHandler(
+            IMovieRepository repository
+        )
         {
             _repository = repository;
         }
 
-        public CreateMovieResponse Handle(CreateMovieRequest command)
+        public async Task<CreateMovieResponse> Handle(CreateMovieRequest command)
         {
             var movie = new Movie
             {
@@ -23,7 +25,7 @@ namespace my_movies_api.Models.Handlers
                 Descricao = command.Descricao
             };
 
-            _repository.Save(movie);
+            await _repository.Save(movie);
 
             return new CreateMovieResponse 
             {

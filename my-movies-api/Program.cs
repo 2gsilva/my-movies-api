@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using my_movies_api.Data;
+using my_movies_api.Data.Cachings;
 using my_movies_api.Data.Repositories;
 using my_movies_api.Models._3.Handlers;
 using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
@@ -17,7 +18,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // dependency injection
-builder.Services.AddScoped<MovieRepository>();
+//builder.Services.AddScoped<MovieRepository>();
 
 // Cors Policy
 builder.Services.AddCors(options =>
@@ -44,7 +45,15 @@ builder.Services
     .AddScoped<ICreateMovieHandler, CreateMovieHandler>()
     .AddScoped<IGetMoviesHandler, GetMoviesHandler>()
     .AddScoped<IMovieRepository, MovieRepository>()
-    .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"));
+    .AddScoped<IMovieRepository, MovieRepository>()
+    .AddScoped<IMovieCaching, MovieCaching>()
+    .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"))
+    .AddStackExchangeRedisCache(e => 
+    {
+        e.InstanceName = "instance";
+        e.Configuration = "172.26.128.1:6379";
+    });
+
 
 var app = builder.Build();
 
