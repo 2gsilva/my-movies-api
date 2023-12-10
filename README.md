@@ -29,7 +29,8 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 ## 🛠️ Construído com (tecnologias e técnicas)
 
 * ASP.NET Web API
-* .Net7 C#
+* .Net7
+* C#
 * Entity Framework Core In-Memory
 * CQRS pattern
 * Estratégia de cache com Redis
