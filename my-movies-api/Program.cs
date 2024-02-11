@@ -5,8 +5,10 @@ using my_movies_api.Data.Repositories;
 using my_movies_api.Models._3.Handlers;
 using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
 using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
+using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._3.Services;
 using my_movies_api.Models.Handlers;
 using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,8 +44,10 @@ builder.Services
     .AddScoped<ICreateMovieHandler, CreateMovieHandler>()
     .AddScoped<IGetMoviesHandler, GetMoviesHandler>()
     .AddScoped<IMovieRepository, MovieRepository>()
-    .AddScoped<IMovieRepository, MovieRepository>()
+    .AddScoped<IMoviesService, MoviesService>()
     .AddScoped<IMovieCaching, MovieCaching>()
+    .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
+    .AddScoped<HttpClient>()
     .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"))
     .AddStackExchangeRedisCache(e => 
     {

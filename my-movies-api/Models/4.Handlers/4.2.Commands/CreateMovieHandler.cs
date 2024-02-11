@@ -16,23 +16,5 @@ namespace my_movies_api.Models.Handlers
         {
             _repository = repository;
         }
-
-        public async Task<CreateMovieResponse> Handle(CreateMovieRequest command)
-        {
-            var movie = new Movie
-            {
-                Titulo = command.Titulo,
-                Descricao = command.Descricao
-            };
-
-            await _repository.Save(movie);
-
-            return new CreateMovieResponse 
-            {
-                Id = movie.Id,
-                Titulo = movie.Titulo,
-                Descricao = movie.Descricao
-            };
-        }
     }
 }

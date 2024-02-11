@@ -4,68 +4,58 @@ using my_movies_api.Models._3.Querys._3._2.Responses;
 using my_movies_api.Data.Cachings;
 using my_movies_api.Models.Domains;
 using Newtonsoft.Json;
+using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._3.Services;
 
 namespace my_movies_api.Models._3.Handlers
 {
     public class GetMoviesHandler : IGetMoviesHandler
     {
-        private readonly IMovieRepository _repository;
+        private readonly IMoviesService _service;
         private readonly IMovieCaching _cache;
 
         public GetMoviesHandler(
-            IMovieRepository repository, 
+            IMoviesService service, 
             IMovieCaching cache
         )
         {
-            _repository = repository;
+            _service = service;
             _cache = cache;
         }
 
-        public async Task<ICollection<GetMoviesResponse>> Handle() 
+        public async Task<ICollection<GetMoviesResponse>> Handle(string movie)
         {
-            var movies = await _repository.Get(); 
-                
             List<GetMoviesResponse> moviesResponse = new List<GetMoviesResponse>();
+            var movies = new Movie();
 
-            foreach (var movie in movies) 
-            {
-                moviesResponse.Add(new GetMoviesResponse 
-                {
-                    Id = movie.Id,
-                    Titulo = movie.Titulo,
-                    Descricao = movie.Descricao
-                });
-            }
-
-            return moviesResponse;
-        }
-
-        public async Task<GetMovieResponse> Handle(string id)
-        {
-            Movie? movie;
-
-            var moviesCache = await _cache.GetAsync(id.ToString());
+            var moviesCache = await _cache.GetAsync(movie);
 
             if (!string.IsNullOrEmpty(moviesCache))
             {
-                movie = JsonConvert.DeserializeObject<Movie>(moviesCache);
+                movies = JsonConvert.DeserializeObject<Movie>(moviesCache);
             }
             else
             {
-                movie = await _repository.Get(id);
+                movies = await _service.GetMovie(movie);
 
                 if (movie is not null)
-                    await _cache.SetAsync(id.ToString(), JsonConvert.SerializeObject(movie));
+                    await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
             }
 
-            return movie is not null ?
-            new GetMovieResponse()
+            if (movies.Search is not null) 
             {
-                Id = movie.Id,
-                Titulo = movie.Titulo,
-                Descricao = movie.Descricao
-            } :
-            null;
+                foreach (var m in movies.Search)
+                {
+                    moviesResponse.Add(new GetMoviesResponse
+                    {
+                        Id = m.Id,
+                        Title = m.Title,
+                        Year = m.Year,
+                        Poster = m.Poster
+                    });
+                }
+            }
+            
+            return moviesResponse;
         }
     }
 }

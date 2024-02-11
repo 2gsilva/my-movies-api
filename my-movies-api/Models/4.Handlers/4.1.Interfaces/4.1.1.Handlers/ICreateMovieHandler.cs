@@ -5,6 +5,6 @@ namespace my_movies_api.Models.Handlers.Interfaces.Handlers
 {
     public interface ICreateMovieHandler
     {
-        Task<CreateMovieResponse> Handle(CreateMovieRequest command);
+        //Task<CreateMovieResponse> Handle(CreateMovieRequest command);
     }
 }

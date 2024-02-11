@@ -25,12 +25,5 @@ namespace my_movies_api.Data.Repositories
                 .Movies
                 .ToListAsync();
         }
-
-        public async Task<Movie> Get(string id)
-        {
-            return await _context
-                .Movies
-                .FirstOrDefaultAsync( e => e.Id.ToString() == id);
-        }
     }
 }
