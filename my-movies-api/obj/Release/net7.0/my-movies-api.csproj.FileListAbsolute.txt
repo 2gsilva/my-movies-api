@@ -43,3 +43,4 @@ C:\RepoPessoal\my-movies-api\my-movies-api\bin\Release\net7.0\Microsoft.Extensio
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Release\net7.0\Newtonsoft.Json.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Release\net7.0\Pipelines.Sockets.Unofficial.dll
 C:\RepoPessoal\my-movies-api\my-movies-api\bin\Release\net7.0\StackExchange.Redis.dll
+C:\RepoPessoal\my-movies-api\my-movies-api\obj\Release\net7.0\my-movies-api.sourcelink.json
