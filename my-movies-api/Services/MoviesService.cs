@@ -23,8 +23,8 @@ namespace my_movies_api.Services
         public async Task<Movie> GetMovie(string movie) 
         {
             var response = await HttpCliente()
-                //.GetAsync($"{_baseUrl}?s={movie}&apikey={_apiKey}");
-                .GetAsync($"{_baseUrl}?type={movie}&apikey={_apiKey}");
+                .GetAsync($"{_baseUrl}?s={movie}&apikey={_apiKey}");
+                //.GetAsync($"{_baseUrl}?type={movie}&apikey={_apiKey}");
 
             var result = response
                 .Content

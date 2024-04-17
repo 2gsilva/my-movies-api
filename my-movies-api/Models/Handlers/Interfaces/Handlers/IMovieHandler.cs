@@ -2,8 +2,8 @@
 
 namespace my_movies_api.Models.Handlers.Interfaces.Handlers
 {
-    public interface IGetMoviesHandler
+    public interface IMovieHandler
     {
-        Task<ICollection<GetMoviesResponse>> Handle(string movie);
+        Task<ICollection<GetMoviesResponse>> GetMovies(string movie);
     }
 }

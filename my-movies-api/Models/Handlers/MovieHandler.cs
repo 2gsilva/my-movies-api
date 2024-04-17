@@ -1,18 +1,18 @@
 ﻿using my_movies_api.Data.Cachings;
 using my_movies_api.Models.Domains;
-using Newtonsoft.Json;
-using my_movies_api.Models.Handlers.Interfaces.Services;
 using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Models.Handlers.Interfaces.Services;
 using my_movies_api.Models.Querys.Responses;
+using Newtonsoft.Json;
 
-namespace my_movies_api.Models.Handlers.Querys
+namespace my_movies_api.Models.Handlers
 {
-    public class GetMoviesHandler : IGetMoviesHandler
+    public class MovieHandler : IMovieHandler
     {
         private readonly IMoviesService _service;
         private readonly IMovieCaching _cache;
 
-        public GetMoviesHandler(
+        public MovieHandler(
             IMoviesService service,
             IMovieCaching cache
         )
@@ -21,7 +21,7 @@ namespace my_movies_api.Models.Handlers.Querys
             _cache = cache;
         }
 
-        public async Task<ICollection<GetMoviesResponse>> Handle(string movie)
+        public async Task<ICollection<GetMoviesResponse>> GetMovies(string movie)
         {
             List<GetMoviesResponse> moviesResponse = new List<GetMoviesResponse>();
             var movies = new Movie();
@@ -30,29 +30,26 @@ namespace my_movies_api.Models.Handlers.Querys
 
             if (!string.IsNullOrEmpty(moviesCache))
             {
-                movies = JsonConvert.DeserializeObject<Movie>(moviesCache);
+                movies = JsonConvert.DeserializeObject<Movie>(moviesCache);      
             }
-            else
+
+            if (movies.Search is null)
             {
                 movies = await _service.GetMovie(movie);
-
-                if (movie is not null)
-                    await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
+                await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
             }
-
-            if (movies.Search is not null)
+            
+            foreach (var m in movies.Search)
             {
-                foreach (var m in movies.Search)
+                moviesResponse.Add(new GetMoviesResponse
                 {
-                    moviesResponse.Add(new GetMoviesResponse
-                    {
-                        Id = m.Id,
-                        Title = m.Title,
-                        Year = m.Year,
-                        Poster = m.Poster
-                    });
-                }
+                    Id = m.Id,
+                    Title = m.Title,
+                    Year = m.Year,
+                    Poster = m.Poster
+                });
             }
+            
 
             return moviesResponse;
         }

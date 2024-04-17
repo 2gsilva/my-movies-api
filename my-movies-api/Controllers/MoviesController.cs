@@ -8,11 +8,11 @@ namespace my_movies_api.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly IGetMoviesHandler _getMoviesHandler; 
+        private readonly IMovieHandler _movieHandler; 
 
-        public MoviesController(IGetMoviesHandler getMoviesHandler) 
+        public MoviesController(IMovieHandler movieHandler) 
         {
-            _getMoviesHandler = getMoviesHandler;
+            _movieHandler = movieHandler;
         }
                 
         [HttpGet]
@@ -23,9 +23,9 @@ namespace my_movies_api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(string movie)
         {
-            var response = await _getMoviesHandler.Handle(movie);
+            var response = await _movieHandler.GetMovies(movie);
 
-            if (response is null)
+            if (!response.Any())
                 return NoContent();
 
             return Ok(response);

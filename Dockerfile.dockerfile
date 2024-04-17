@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM 2gsilva/my-movies-api
 LABEL version="1.0" maintainer="Guilherme S. de Azevedo"
 WORKDIR /app
 COPY ./dist .

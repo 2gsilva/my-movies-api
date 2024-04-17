@@ -19,7 +19,13 @@ namespace my_movies_api.Data.Cachings
 
         public async Task SetAsync(string key, string value)
         {
-            await _cache.SetStringAsync(key, value);
+            var options = new DistributedCacheEntryOptions
+            {
+                // Define o tempo de expiração para 30 segundos a partir de agora
+                AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(30)
+            };
+
+            await _cache.SetStringAsync(key, value, options);
         }
     }
 }
