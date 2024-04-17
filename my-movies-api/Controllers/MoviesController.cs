@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
+using my_movies_api.Models.Handlers.Interfaces.Handlers;
 
 namespace my_movies_api.Controllers
 {
@@ -8,11 +8,11 @@ namespace my_movies_api.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly IGetMoviesHandler _get; 
+        private readonly IGetMoviesHandler _getMoviesHandler; 
 
-        public MoviesController(IGetMoviesHandler get) 
+        public MoviesController(IGetMoviesHandler getMoviesHandler) 
         {
-            _get = get;
+            _getMoviesHandler = getMoviesHandler;
         }
                 
         [HttpGet]
@@ -23,7 +23,7 @@ namespace my_movies_api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(string movie)
         {
-            var response = await _get.Handle(movie);
+            var response = await _getMoviesHandler.Handle(movie);
 
             if (response is null)
                 return NoContent();

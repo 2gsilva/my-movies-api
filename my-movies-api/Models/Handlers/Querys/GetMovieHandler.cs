@@ -1,12 +1,11 @@
-﻿using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
-using my_movies_api.Models._3.Querys._3._2.Responses;
-using my_movies_api.Data.Cachings;
+﻿using my_movies_api.Data.Cachings;
 using my_movies_api.Models.Domains;
 using Newtonsoft.Json;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._3.Services;
+using my_movies_api.Models.Handlers.Interfaces.Services;
+using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Models.Querys.Responses;
 
-namespace my_movies_api.Models._3.Handlers
+namespace my_movies_api.Models.Handlers.Querys
 {
     public class GetMoviesHandler : IGetMoviesHandler
     {
@@ -14,7 +13,7 @@ namespace my_movies_api.Models._3.Handlers
         private readonly IMovieCaching _cache;
 
         public GetMoviesHandler(
-            IMoviesService service, 
+            IMoviesService service,
             IMovieCaching cache
         )
         {
@@ -41,7 +40,7 @@ namespace my_movies_api.Models._3.Handlers
                     await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
             }
 
-            if (movies.Search is not null) 
+            if (movies.Search is not null)
             {
                 foreach (var m in movies.Search)
                 {
@@ -54,7 +53,7 @@ namespace my_movies_api.Models._3.Handlers
                     });
                 }
             }
-            
+
             return moviesResponse;
         }
     }

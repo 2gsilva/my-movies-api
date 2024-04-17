@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using my_movies_api.Data;
 using my_movies_api.Data.Cachings;
 using my_movies_api.Data.Repositories;
-using my_movies_api.Models._3.Handlers;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._1.Handlers;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
-using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._3.Services;
-using my_movies_api.Models.Handlers;
+using my_movies_api.Models.Handlers.Commands;
 using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Models.Handlers.Interfaces.Repositories;
+using my_movies_api.Models.Handlers.Interfaces.Services;
+using my_movies_api.Models.Handlers.Querys;
 using my_movies_api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,6 +40,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddMvc();
 
+// Injeção de Dependência
 builder.Services
     .AddScoped<ICreateMovieHandler, CreateMovieHandler>()
     .AddScoped<IGetMoviesHandler, GetMoviesHandler>()
@@ -47,13 +48,17 @@ builder.Services
     .AddScoped<IMoviesService, MoviesService>()
     .AddScoped<IMovieCaching, MovieCaching>()
     .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
-    .AddScoped<HttpClient>()
+    .AddScoped<HttpClient>();
+
+// Conf Cache
+    builder.Services
     .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"))
     .AddStackExchangeRedisCache(e => 
     {
         e.InstanceName = "instance";
         e.Configuration = "172.26.128.1:6379";
-    });
+    })
+    .AddSingleton<DistributedCacheEntryOptions, CustomCacheEntryOptions>();
 
 
 var app = builder.Build();

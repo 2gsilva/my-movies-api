@@ -1,10 +1,10 @@
-﻿using my_movies_api.Models._4.Handlers._4._1.Interfaces._4._1._2.Repositories;
-using my_movies_api.Models.Commands.Requests;
+﻿using my_movies_api.Models.Commands.Requests;
 using my_movies_api.Models.Commands.Responses;
 using my_movies_api.Models.Domains;
 using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Models.Handlers.Interfaces.Repositories;
 
-namespace my_movies_api.Models.Handlers
+namespace my_movies_api.Models.Handlers.Commands
 {
     public class CreateMovieHandler : ICreateMovieHandler
     {

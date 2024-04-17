@@ -1,6 +1,6 @@
-﻿namespace my_movies_api.Models._3.Querys._3._2.Responses
+﻿namespace my_movies_api.Models.Abstracts
 {
-    public class GetMovieResponse
+    public abstract class MovieAbstract
     {
         public string Title { get; set; } = string.Empty;
         public string Year { get; set; } = string.Empty;
