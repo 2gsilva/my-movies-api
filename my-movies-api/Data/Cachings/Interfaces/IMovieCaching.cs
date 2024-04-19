@@ -1,4 +1,4 @@
-﻿namespace my_movies_api.Data.Cachings
+﻿namespace my_movies_api.Data.Cachings.Interfaces
 {
     public interface IMovieCaching
     {

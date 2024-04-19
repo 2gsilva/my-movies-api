@@ -1,28 +1,29 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using my_movies_api.Models.Domains;
-using my_movies_api.Models.Handlers.Interfaces.Repositories;
+using my_movies_api.Models.Interfaces.Repositories;
 
 namespace my_movies_api.Data.Repositories
 {
-    public class MovieRepository : IMovieRepository
+    public class FavoriteRepository : IFavoriteRepository
     {
         private readonly MovieContext _context;
 
-        public MovieRepository(MovieContext context) 
+        public FavoriteRepository(MovieContext context) 
         {
             _context = context;
         }
 
-        public async Task Save(Movie movie)
+        public async Task Save(Favorite favorite)
         {
-            await _context.AddAsync(movie);
+            await _context.AddAsync(favorite);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<ICollection<Movie>> Get()
+        public async Task<ICollection<Favorite>> Get()
         {
             return await _context
-                .Movies
+                .Favorites
+                .Include(f => f.Search)
                 .ToListAsync();
         }
     }

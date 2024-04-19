@@ -2,7 +2,7 @@
 
 namespace my_movies_api.Models.Querys.Responses
 {
-    public class GetMoviesResponse : MovieAbstract
+    public class MovieResponse : MovieAbstract
     {
         public string Id { get; set; } = string.Empty;
     }

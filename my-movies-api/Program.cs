@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using my_movies_api.Data;
 using my_movies_api.Data.Cachings;
+using my_movies_api.Data.Cachings.Interfaces;
 using my_movies_api.Data.Repositories;
-using my_movies_api.Models.Handlers;
-using my_movies_api.Models.Handlers.Interfaces.Handlers;
-using my_movies_api.Models.Handlers.Interfaces.Repositories;
-using my_movies_api.Models.Handlers.Interfaces.Services;
+using my_movies_api.Models.Commands.Handlers;
+using my_movies_api.Models.Commands.Handlers.Interfaces;
+using my_movies_api.Models.Interfaces.Repositories;
+using my_movies_api.Models.Interfaces.Services;
+using my_movies_api.Models.Querys.Handlers;
+using my_movies_api.Models.Querys.Handlers.Interfaces;
 using my_movies_api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,10 +43,13 @@ builder.Services.AddMvc();
 
 // Injeção de Dependência
 builder.Services
-    .AddScoped<IMovieRepository, MovieRepository>()
+    .AddScoped<ISearchRepository, SearchRepository>()
+    .AddScoped<IFavoriteRepository, FavoriteRepository>()
     .AddScoped<IMoviesService, MoviesService>()
     .AddScoped<IMovieCaching, MovieCaching>()
-    .AddScoped<IMovieHandler, MovieHandler>()
+    .AddScoped<IMovieQueryHandler, MovieQueryHandler>()
+    .AddScoped<IFavoriteQueryHandler, FavoriteQueryHandler>()
+    .AddScoped<IFavoriteCommandHandler, FavoriteCommandHandler>()
     .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
     .AddScoped<HttpClient>();
 

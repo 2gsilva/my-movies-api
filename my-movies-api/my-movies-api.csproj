@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\Handlers\Commands\**" />
-    <Content Remove="Models\Handlers\Commands\**" />
-    <EmbeddedResource Remove="Models\Handlers\Commands\**" />
-    <None Remove="Models\Handlers\Commands\**" />
+    <Compile Remove="Models\Querys\Handlers\Commands\**" />
+    <Content Remove="Models\Querys\Handlers\Commands\**" />
+    <EmbeddedResource Remove="Models\Querys\Handlers\Commands\**" />
+    <None Remove="Models\Querys\Handlers\Commands\**" />
   </ItemGroup>
 
   <ItemGroup>

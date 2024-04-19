@@ -8,6 +8,7 @@ namespace my_movies_api.Data
         public MovieContext(DbContextOptions<MovieContext> options) : base(options) 
         { }
         
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Search> Searches { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
     }
 }

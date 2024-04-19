@@ -1,6 +1,6 @@
 ﻿using my_movies_api.Models.Domains;
 using Newtonsoft.Json;
-using my_movies_api.Models.Handlers.Interfaces.Services;
+using my_movies_api.Models.Interfaces.Services;
 
 namespace my_movies_api.Services
 {

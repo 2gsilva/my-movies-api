@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using my_movies_api.Models.Handlers.Interfaces.Handlers;
+using my_movies_api.Models.Querys.Handlers.Interfaces;
 
 namespace my_movies_api.Controllers
 {
@@ -8,9 +8,9 @@ namespace my_movies_api.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly IMovieHandler _movieHandler; 
+        private readonly IMovieQueryHandler _movieHandler; 
 
-        public MoviesController(IMovieHandler movieHandler) 
+        public MoviesController(IMovieQueryHandler movieHandler) 
         {
             _movieHandler = movieHandler;
         }

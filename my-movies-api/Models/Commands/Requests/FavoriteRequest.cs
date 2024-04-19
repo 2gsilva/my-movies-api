@@ -2,6 +2,7 @@
 
 namespace my_movies_api.Models.Commands.Requests
 {
-    public class CreateMovieRequest : MovieAbstract
-    { }
+    public class FavoriteRequest : FavoriteAbstract
+    {
+    }
 }

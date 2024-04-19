@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
+using my_movies_api.Data.Cachings.Interfaces;
 
 namespace my_movies_api.Data.Cachings
 {
