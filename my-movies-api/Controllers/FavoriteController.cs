@@ -44,7 +44,7 @@ namespace my_movies_api.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Get([FromBody] FavoriteRequest favorite)
+        public async Task<IActionResult> Post([FromBody] FavoriteRequest favorite)
         {
             if (!ModelState.IsValid)
                 BadRequest();

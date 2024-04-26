@@ -1,6 +1,4 @@
-﻿using my_movies_api.Models.Abstracts;
-
-namespace my_movies_api.Models.Domains
+﻿namespace my_movies_api.Models.Domains
 {
     public class Movie
     {
