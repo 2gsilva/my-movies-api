@@ -54,7 +54,7 @@ jobs:
       run: echo "DOCKER_IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
 
     - name: Build the Docker image
-      run: docker build -f "Dockerfile.dockerfile" -t my-movies-api:$DOCKER_IMAGE_TAG .
+      run: docker build -t my-movies-api:$DOCKER_IMAGE_TAG dist/
 
     - name: Login to Docker Hub
       run: docker login -u 2gsilva -p ${{ secrets.DOCKERHUB_TOKEN }}
