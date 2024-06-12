@@ -60,8 +60,9 @@ jobs:
       run: docker login -u 2gsilva -p ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Set tag in Docker Hub
-      run: docker tag my-movies-api:$DOCKER_IMAGE_TAG 2gsilva/my-movies-api:latest
+      run: docker tag my-movies-api:latest 2gsilva/my-movies-api:latest
      # run: docker tag my-movies-api:$DOCKER_IMAGE_TAG 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
      
     - name: Publish Image to Docker Hub
-      run: docker push 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
+      run: docker push 2gsilva/my-movies-api:latest
+      #run: docker push 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
