@@ -49,18 +49,9 @@ jobs:
       with:
         name: my-movie-api-artifact
         path: dist/
-
-    - name: Debug diretório
-      run: ls -la 
-
-    - name: Debug Dockerfile
-      run: cat Dockerfile.dockerfile
-
-    - name: Debug dist
-      run: ls -la dist 
   
-    - name: Set the Docker image tag
-      run: echo "DOCKER_IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+    # - name: Set the Docker image tag
+      # run: echo "DOCKER_IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
 
     - name: Build the Docker image
       run: docker build -f "Dockerfile.dockerfile" -t my-movies-api:$DOCKER_IMAGE_TAG dist/
@@ -69,7 +60,8 @@ jobs:
       run: docker login -u 2gsilva -p ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Set tag in Docker Hub
-      run: docker tag my-movies-api:$DOCKER_IMAGE_TAG 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
-  
+      run: docker tag my-movies-api:$DOCKER_IMAGE_TAG 2gsilva/my-movies-api:latest
+     # run: docker tag my-movies-api:$DOCKER_IMAGE_TAG 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
+     
     - name: Publish Image to Docker Hub
       run: docker push 2gsilva/my-movies-api:$DOCKER_IMAGE_TAG
