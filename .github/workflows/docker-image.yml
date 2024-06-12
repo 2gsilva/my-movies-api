@@ -50,6 +50,9 @@ jobs:
         name: my-movie-api-artifact
         path: dist/
 
+    - name: Debug diretório
+      run: ls -la 
+
     - name: Debug Dockerfile
       run: cat Dockerfile.dockerfile
 
