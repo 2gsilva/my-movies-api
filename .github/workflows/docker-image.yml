@@ -49,6 +49,9 @@ jobs:
       with:
         name: my-movie-api-artifact
         path: dist/
+
+    - name: Debug
+      run: ls -la dist/
   
     - name: Set the Docker image tag
       run: echo "DOCKER_IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
