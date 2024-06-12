@@ -54,7 +54,7 @@ jobs:
       run: cat Dockerfile.dockerfile
 
     - name: Debug dist
-      run: ls -la /dist 
+      run: ls -la dist 
   
     - name: Set the Docker image tag
       run: echo "DOCKER_IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
