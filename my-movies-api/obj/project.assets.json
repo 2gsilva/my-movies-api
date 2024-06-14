@@ -1228,24 +1228,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\guilh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\RepoPessoal\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
+      "projectUniqueName": "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
       "projectName": "my-movies-api",
-      "projectPath": "C:\\RepoPessoal\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
-      "packagesPath": "C:\\Users\\GSAZEVEDO\\.nuget\\packages\\",
-      "outputPath": "C:\\RepoPessoal\\my-movies-api\\my-movies-api\\obj\\",
+      "projectPath": "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
+      "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
+      "outputPath": "C:\\Repositorys\\my-movies-api\\my-movies-api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\GSAZEVEDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1266,6 +1261,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1304,24 +1304,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1330,7 +1312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
