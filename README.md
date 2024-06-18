@@ -36,3 +36,4 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 * Estratégia de cache com Redis
 * Docker
 * Docker-Compose
+* Pipeline de build automatizado com Git Action
