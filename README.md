@@ -1,6 +1,8 @@
 #  My Movies API
 Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de Arquitetura de Software Distribuído da PUC Minas. 
 
+Trata-se de uma API Rest, utiliza CQRS pattern (Command Query Responsibility Segregation - Segregação de Responsabilidade de Comando e Consulta), com dois bancos de dados, um de leitura e outro de escrita.
+
 :construction: Projeto em construção :construction:
 
 ## 📍 Como executar o projeto
@@ -10,6 +12,8 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 - pré-requisitos:
     - SDK .NET7
         https://dotnet.microsoft.com/pt-br/download/dotnet/7.0
+    - Redis
+        https://redis.io/downloads/
 
 ```
 ### 🐳 docker
@@ -36,3 +40,4 @@ Esse projeto trata de um exercício de Pós-Graduação Latus Sensu do curso de 
 * Estratégia de cache com Redis
 * Docker
 * Docker-Compose
+* Pipeline de build automatizado com Git Action
