@@ -26,6 +26,9 @@ jobs:
     - name: Build
       run: dotnet build
 
+    - name: Test
+      run: dotnet test
+
     - name: Publish project
       run: dotnet publish -c Release -o dist
 

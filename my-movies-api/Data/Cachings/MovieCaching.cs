@@ -22,8 +22,8 @@ namespace my_movies_api.Data.Cachings
         {
             var options = new DistributedCacheEntryOptions
             {
-                // Define o tempo de expiração para 30 segundos a partir de agora
-                AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(30)
+                // Define o tempo de expiração para 30 minutos
+                AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(30)
             };
 
             await _cache.SetStringAsync(key, value, options);
