@@ -27,7 +27,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                // Origens espec�ficas
+                // Origens especificas
                 //.WithOrigins(
                 //"http://localhost:3000",
                 //"https://localhost:3000"
@@ -59,7 +59,7 @@ builder.Services
     .AddStackExchangeRedisCache(e => 
     {
         e.InstanceName = "instance";
-        e.Configuration = "172.26.128.1:6379";
+        e.Configuration = "172.20.0.2:6379";
     });
 
 var app = builder.Build();
