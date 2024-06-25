@@ -26,20 +26,27 @@ namespace my_movies_api.Models.Querys.Handlers
             var moviesResponse = new List<MovieResponse>();
             var movies = new Movie();
 
-            var moviesCache = await _cache.GetAsync(movie);
-
-            if (!string.IsNullOrEmpty(moviesCache))
+            try
             {
-                movies = JsonConvert.DeserializeObject<Movie>(moviesCache);
+                var moviesCache = await _cache.GetAsync(movie);
+
+                if (!string.IsNullOrEmpty(moviesCache))
+                {
+                    movies = JsonConvert.DeserializeObject<Movie>(moviesCache);
+                }
+
+                if (movies.Search is null)
+                {
+                    movies = await _service.GetMovie(movie);
+                    await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new($"Erro inesperado: {ex.Message}");
             }
 
-            if (movies.Search is null)
-            {
-                movies = await _service.GetMovie(movie);
-                await _cache.SetAsync(movie, JsonConvert.SerializeObject(movies));
-            }
-
-            foreach (var m in movies.Search)
+            foreach (var m in movies?.Search)
             {
                 moviesResponse.Add(new MovieResponse
                 {

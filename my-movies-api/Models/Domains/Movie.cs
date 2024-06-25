@@ -2,7 +2,7 @@
 {
     public class Movie
     {
-        public ICollection<Search> Search { get; set; }
+        public ICollection<Search>? Search { get; set; }
         public string TotalResults { get; set; } = string.Empty;
         public string Response { get; set; } = string.Empty;
     }

@@ -27,7 +27,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                // Origens específicas
+                // Origens especï¿½ficas
                 //.WithOrigins(
                 //"http://localhost:3000",
                 //"https://localhost:3000"
@@ -41,7 +41,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddMvc();
 
-// Injeção de Dependência
+// Injecao de Dependencia
 builder.Services
     .AddScoped<ISearchRepository, SearchRepository>()
     .AddScoped<IFavoriteRepository, FavoriteRepository>()
@@ -73,7 +73,7 @@ app.UseSwaggerUI();
 // Permitir qualquer origem
 app.UseCors(cors => cors.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-// Permitir origens específicas
+// Permitir origens especificas
 app.UseCors();
 
 app.UseHttpsRedirection();

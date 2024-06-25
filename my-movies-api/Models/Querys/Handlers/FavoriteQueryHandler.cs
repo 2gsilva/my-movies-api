@@ -26,18 +26,25 @@ namespace my_movies_api.Models.Querys.Handlers
             var favoritesResponse = new List<FavoriteResponse>();
             var favorites = new List<Favorite>();
 
-            var favoritesCache = await _cache.GetAsync("favorite");
-
-            if (!string.IsNullOrEmpty(favoritesCache))
+            try
             {
-                favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoritesCache);
+                var favoritesCache = await _cache.GetAsync("favorite");
+
+                if (!string.IsNullOrEmpty(favoritesCache))
+                {
+                    favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoritesCache);
+                }
+                else 
+                {
+                    favorites = (List<Favorite>)await _favoriteRepository.Get();
+
+                    if(favorites.Any())
+                        await _cache.SetAsync("favorite", JsonConvert.SerializeObject(favorites));
+                }
             }
-            else 
+            catch(Exception ex)
             {
-                favorites = (List<Favorite>)await _favoriteRepository.Get();
-
-                if(favorites.Any())
-                    await _cache.SetAsync("favorite", JsonConvert.SerializeObject(favorites));
+                throw new($"Erro inesperado: {ex.Message}");
             }
 
             foreach (var f in favorites)
