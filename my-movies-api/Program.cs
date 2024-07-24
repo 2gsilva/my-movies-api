@@ -58,8 +58,8 @@ builder.Services
     .AddDbContext<MovieContext>(opt => opt.UseInMemoryDatabase("MovieDb"))
     .AddStackExchangeRedisCache(e => 
     {
-        e.InstanceName = "instance";
-        e.Configuration = "172.20.0.2:6379";
+        e.InstanceName = builder.Configuration.GetSection("Redis").GetSection("instance").Value;
+        e.Configuration = builder.Configuration.GetSection("Redis").GetSection("Configuration").Value;
     });
 
 var app = builder.Build();
