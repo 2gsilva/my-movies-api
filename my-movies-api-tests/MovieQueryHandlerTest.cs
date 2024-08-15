@@ -1,10 +1,9 @@
+using AutoMapper;
 using Moq;
 using my_movies_api.Application.Querys.Handlers;
 using my_movies_api.Domain.Models.Interfaces.Services;
 using my_movies_api.Infrastructure.Data.Cachings.Interfaces;
-using my_movies_api.Models.Domains;
 using my_movies_api_tests.Mocks;
-using System.Reflection;
 
 namespace my_movies_api_tests
 {
@@ -12,16 +11,19 @@ namespace my_movies_api_tests
     {
         private readonly Mock<IMoviesService> _movieServiceMock;
         private readonly Mock<IMovieCaching> _cacheMock;
+        private readonly Mock<IMapper> _mapperMock;
         private readonly MovieQueryHandler _movieHendler;
 
         public MovieQueryHandlerTest()
         {
             _movieServiceMock = new Mock<IMoviesService>();
             _cacheMock = new Mock<IMovieCaching>();
+            _mapperMock = new Mock<IMapper>();
 
             _movieHendler = new MovieQueryHandler(
                 _movieServiceMock.Object,
-                _cacheMock.Object
+                _cacheMock.Object,
+                _mapperMock.Object
             );
         }
 
