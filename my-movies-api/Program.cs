@@ -1,15 +1,17 @@
 using Microsoft.EntityFrameworkCore;
-using my_movies_api.Data;
-using my_movies_api.Data.Cachings;
-using my_movies_api.Data.Cachings.Interfaces;
-using my_movies_api.Data.Repositories;
-using my_movies_api.Models.Commands.Handlers;
-using my_movies_api.Models.Commands.Handlers.Interfaces;
-using my_movies_api.Models.Interfaces.Repositories;
-using my_movies_api.Models.Interfaces.Services;
-using my_movies_api.Models.Querys.Handlers;
-using my_movies_api.Models.Querys.Handlers.Interfaces;
-using my_movies_api.Services;
+using my_movies_api._4_Infrastructure.Cross_Cutting.AutoMapperConfigs;
+using my_movies_api.Application.Commands.Handlers;
+using my_movies_api.Application.Commands.Handlers.Interfaces;
+using my_movies_api.Application.Querys.Handlers;
+using my_movies_api.Application.Querys.Handlers.Interfaces;
+using my_movies_api.Domain.Models.Interfaces.Repositories;
+using my_movies_api.Domain.Models.Interfaces.Services;
+using my_movies_api.Infrastructure.Cross_Cutting.AutoMapperConfigs;
+using my_movies_api.Infrastructure.Data;
+using my_movies_api.Infrastructure.Data.Cachings;
+using my_movies_api.Infrastructure.Data.Cachings.Interfaces;
+using my_movies_api.Infrastructure.Data.Repositories;
+using my_movies_api.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +42,9 @@ builder.Services.AddCors(options =>
         });
 });
 builder.Services.AddMvc();
+
+// AutoMapper
+builder.Services.AddAutoMapperApi(typeof(MapperProfile));
 
 // Injecao de Dependencia
 builder.Services

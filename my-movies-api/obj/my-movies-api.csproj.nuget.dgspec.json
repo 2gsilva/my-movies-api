@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj": {}
+    "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj": {}
   },
   "projects": {
-    "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj": {
+    "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
+        "projectUniqueName": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
         "projectName": "my-movies-api",
-        "projectPath": "C:\\Repositorys\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
+        "projectPath": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
         "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorys\\my-movies-api\\my-movies-api\\obj\\",
+        "outputPath": "C:\\Repos\\my-movies-api\\my-movies-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.2, )"

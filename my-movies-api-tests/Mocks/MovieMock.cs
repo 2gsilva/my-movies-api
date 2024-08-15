@@ -1,4 +1,4 @@
-﻿using my_movies_api.Models.Domains;
+﻿using my_movies_api.Domain.Models.Entities;
 
 namespace my_movies_api_tests.Mocks
 {

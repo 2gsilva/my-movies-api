@@ -8,13 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\Querys\Handlers\Commands\**" />
-    <Content Remove="Models\Querys\Handlers\Commands\**" />
-    <EmbeddedResource Remove="Models\Querys\Handlers\Commands\**" />
-    <None Remove="Models\Querys\Handlers\Commands\**" />
+    <Compile Remove="2-Application\Querys\Handlers\Commands\**" />
+    <Content Remove="2-Application\Querys\Handlers\Commands\**" />
+    <EmbeddedResource Remove="2-Application\Querys\Handlers\Commands\**" />
+    <None Remove="2-Application\Querys\Handlers\Commands\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.9" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.0" />

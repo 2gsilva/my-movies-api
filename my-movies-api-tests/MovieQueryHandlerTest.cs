@@ -1,8 +1,8 @@
 using Moq;
-using my_movies_api.Data.Cachings.Interfaces;
+using my_movies_api.Application.Querys.Handlers;
+using my_movies_api.Domain.Models.Interfaces.Services;
+using my_movies_api.Infrastructure.Data.Cachings.Interfaces;
 using my_movies_api.Models.Domains;
-using my_movies_api.Models.Interfaces.Services;
-using my_movies_api.Models.Querys.Handlers;
 using my_movies_api_tests.Mocks;
 using System.Reflection;
 
