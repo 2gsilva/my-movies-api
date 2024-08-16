@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "A2Sdy+cI9tyeQjxNsZHMJ1MIwejLV/a6T1g5TLWBNlQ=",
-  "Source": "my-movies-api",
-  "BasePath": "_content/my-movies-api",
+  "Hash": "qj0QkBMOI46/iKgfpH1T0PcLoeOugnUxTi8fuVtvOEk=",
+  "Source": "my-movies-api.presentation",
+  "BasePath": "_content/my-movies-api.presentation",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

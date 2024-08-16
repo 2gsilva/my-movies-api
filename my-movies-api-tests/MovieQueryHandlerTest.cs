@@ -1,9 +1,9 @@
 using AutoMapper;
 using Moq;
-using my_movies_api.Application.Querys.Handlers;
 using my_movies_api.Domain.Models.Interfaces.Services;
 using my_movies_api.Infrastructure.Data.Cachings.Interfaces;
 using my_movies_api_tests.Mocks;
+using Querys.Handlers;
 
 namespace my_movies_api_tests
 {

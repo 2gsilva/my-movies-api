@@ -415,6 +415,52 @@
             "related": ".xml"
           }
         }
+      },
+      "my-movies-api.application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "Newtonsoft.Json": "13.0.3",
+          "my-movies-api.domain": "1.0.0",
+          "my-movies-api.infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/my-movies-api.application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/my-movies-api.application.dll": {}
+        }
+      },
+      "my-movies-api.domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/my-movies-api.domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/my-movies-api.domain.dll": {}
+        }
+      },
+      "my-movies-api.infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "my-movies-api.domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/my-movies-api.infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/my-movies-api.infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1247,6 +1293,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "my-movies-api.application/1.0.0": {
+      "type": "project",
+      "path": "../mymovieapi.application/my-movies-api.application.csproj",
+      "msbuildProject": "../mymovieapi.application/my-movies-api.application.csproj"
+    },
+    "my-movies-api.domain/1.0.0": {
+      "type": "project",
+      "path": "../my-movies-api.domain/my-movies-api.domain.csproj",
+      "msbuildProject": "../my-movies-api.domain/my-movies-api.domain.csproj"
+    },
+    "my-movies-api.infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../my-movies-api.infrastructure/my-movies-api.infrastructure.csproj",
+      "msbuildProject": "../my-movies-api.infrastructure/my-movies-api.infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1256,7 +1317,10 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 7.0.9",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "my-movies-api.application >= 1.0.0",
+      "my-movies-api.domain >= 1.0.0",
+      "my-movies-api.infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1265,9 +1329,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
-      "projectName": "my-movies-api",
-      "projectPath": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.csproj",
+      "projectUniqueName": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.presentation.csproj",
+      "projectName": "my-movies-api.presentation",
+      "projectPath": "C:\\Repos\\my-movies-api\\my-movies-api\\my-movies-api.presentation.csproj",
       "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
       "outputPath": "C:\\Repos\\my-movies-api\\my-movies-api\\obj\\",
       "projectStyle": "PackageReference",
@@ -1286,7 +1350,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Repos\\my-movies-api\\my-movies-api.domain\\my-movies-api.domain.csproj": {
+              "projectPath": "C:\\Repos\\my-movies-api\\my-movies-api.domain\\my-movies-api.domain.csproj"
+            },
+            "C:\\Repos\\my-movies-api\\my-movies-api.infrastructure\\my-movies-api.infrastructure.csproj": {
+              "projectPath": "C:\\Repos\\my-movies-api\\my-movies-api.infrastructure\\my-movies-api.infrastructure.csproj"
+            },
+            "C:\\Repos\\my-movies-api\\mymovieapi.application\\my-movies-api.application.csproj": {
+              "projectPath": "C:\\Repos\\my-movies-api\\mymovieapi.application\\my-movies-api.application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

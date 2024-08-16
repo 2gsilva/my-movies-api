@@ -1,17 +1,16 @@
+using Commands.Handlers;
+using Commands.Handlers.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using my_movies_api._4_Infrastructure.Cross_Cutting.AutoMapperConfigs;
-using my_movies_api.Application.Commands.Handlers;
-using my_movies_api.Application.Commands.Handlers.Interfaces;
-using my_movies_api.Application.Querys.Handlers;
-using my_movies_api.Application.Querys.Handlers.Interfaces;
 using my_movies_api.Domain.Models.Interfaces.Repositories;
 using my_movies_api.Domain.Models.Interfaces.Services;
-using my_movies_api.Infrastructure.Cross_Cutting.AutoMapperConfigs;
 using my_movies_api.Infrastructure.Data;
 using my_movies_api.Infrastructure.Data.Cachings;
 using my_movies_api.Infrastructure.Data.Cachings.Interfaces;
 using my_movies_api.Infrastructure.Data.Repositories;
 using my_movies_api.Infrastructure.Services;
+using Querys.Handlers;
+using Querys.Handlers.Interfaces;
+using AutoMapperConfigs;
 
 var builder = WebApplication.CreateBuilder(args);
 
