@@ -9,6 +9,6 @@ steps:
   displayName: 'Fazer Pull da Imagem Docker do Docker Hub'
   inputs:
     command: 'pull'
-    containerRegistry: '2gsilva'
+    containerRegistry: 'Docker Hub'
     imageName: '2gsilva/my-movies-api:latest'  # ajuste para o nome da sua imagem
     includeLatest: true  # se quiser incluir a tag "latest"
