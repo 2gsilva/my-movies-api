@@ -1,0 +1,14 @@
+trigger:
+- main  # ou seu branch principal
+
+pool:
+  vmImage: 'ubuntu-latest'  # ou outra imagem que você preferir
+
+steps:
+- task: Docker@2
+  displayName: 'Fazer Pull da Imagem Docker do Docker Hub'
+  inputs:
+    command: 'pull'
+    containerRegistry: 'Docker Hub'
+    imageName: '2gsilva/my-movies-api:latest'  # ajuste para o nome da sua imagem
+    includeLatest: true  # se quiser incluir a tag "latest"
