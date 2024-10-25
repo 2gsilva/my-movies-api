@@ -33,7 +33,7 @@ jobs:
       run: dotnet publish -c Release -o dist
 
     - name: Archive artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: my-movie-api-artifact
         path: dist/
