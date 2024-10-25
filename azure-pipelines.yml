@@ -6,9 +6,10 @@ pool:
 
 steps:
 - task: Docker@2
-  displayName: 'Fazer Pull da Imagem Docker do Docker Hub'
+  displayName: 'Executar a imagem Docker'
   inputs:
-    command: 'pull'
-    containerRegistry: 'Docker Hub'
-    imageName: '2gsilva/my-movies-api:latest'  # ajuste para o nome da sua imagem
-    includeLatest: true  # se quiser incluir a tag "latest"
+    command: 'run'
+    containerRegistry: 'Docker Hub'  # sua conexão de serviço
+    imageName: '2gsilva/my-movies-api:latest'
+    options: '-d'
+
