@@ -41,3 +41,5 @@ Trata-se de uma API Rest, utiliza CQRS pattern (Command Query Responsibility Seg
 * Docker
 * Docker-Compose
 * Pipeline de build automatizado com Git Action
+
+## Poc Azure Pipeline
