@@ -1,8 +1,8 @@
-﻿using my_movies_api.Domain.Models.Abstracts;
+﻿using Abstracts;
 
 namespace Querys.Responses
 {
-    public class FavoriteResponse : FavoriteAbstract
+	public class FavoriteResponse : FavoriteAbstract
     {
         public int Id { get; set; }
     }

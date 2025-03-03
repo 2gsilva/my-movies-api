@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using my_movies_api.Domain.Models.Entities;
 using my_movies_api.Domain.Models.Interfaces.Repositories;
-using my_movies_api.Infrastructure.Data;
 
 namespace my_movies_api.Infrastructure.Data.Repositories
 {
-    public class SearchRepository : ISearchRepository
+	public class SearchRepository : ISearchRepository
     {
         private readonly MovieContext _context;
 

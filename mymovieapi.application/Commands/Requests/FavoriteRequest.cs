@@ -1,8 +1,8 @@
-﻿using my_movies_api.Domain.Models.Abstracts;
+﻿using Abstracts;
 
 namespace Commands.Requests
 {
-    public class FavoriteRequest : FavoriteAbstract
+	public class FavoriteRequest : FavoriteAbstract
     {
     }
 }
