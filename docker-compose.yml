@@ -1,5 +1,11 @@
 version: '3'
 services:
+  spa:
+    image: "2gsilva/my-movies-spa-angular"
+    ports:
+      - "3000:80"
+    networks:
+      - webnet
   api:
     image: "2gsilva/my-movies-api"
     ports:
