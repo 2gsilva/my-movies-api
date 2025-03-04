@@ -3,13 +3,13 @@ services:
   spa:
     image: "2gsilva/my-movies-spa-angular"
     ports:
-      - "3000:80"
+      - "3000:3000"
     networks:
       - webnet
   api:
     image: "2gsilva/my-movies-api"
     ports:
-      - "8080:80"
+      - "5000:5000"
     networks:
       - webnet
   redis:
