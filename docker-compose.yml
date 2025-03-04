@@ -9,7 +9,7 @@ services:
   api:
     image: "2gsilva/my-movies-api"
     ports:
-      - "5000:5000"
+      - "8080:80"
     networks:
       - webnet
   redis:
