@@ -1,11 +1,5 @@
-version: '3'
+version: '4'
 services:
-  spa:
-    image: "2gsilva/my-movies-spa-angular"
-    ports:
-      - "3000:3000"
-    networks:
-      - webnet
   api:
     image: "2gsilva/my-movies-api"
     ports:
@@ -19,11 +13,9 @@ services:
     networks:
       webnet:
         ipv4_address: 172.20.0.2
-
 networks:
   webnet:
     driver: bridge
     ipam:
         config:
             - subnet: 172.20.0.0/24
-              gateway: 172.20.0.1
