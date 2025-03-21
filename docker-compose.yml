@@ -3,7 +3,7 @@ services:
   api:
     image: "2gsilva/my-movies-api"
     ports:
-      - "8080:80"
+      - "8080:8080"
     networks:
       - webnet
   redis:
