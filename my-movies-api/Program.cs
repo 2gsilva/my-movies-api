@@ -1,6 +1,5 @@
 using Commands.Handlers;
 using Commands.Handlers.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using my_movies_api.Domain.Models.Interfaces.Repositories;
 using my_movies_api.Domain.Models.Interfaces.Services;
 using my_movies_api.Infrastructure.Data;
@@ -11,6 +10,7 @@ using my_movies_api.Infrastructure.Services;
 using Querys.Handlers;
 using Querys.Handlers.Interfaces;
 using AutoMapperConfigs;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
